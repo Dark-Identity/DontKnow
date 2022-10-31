@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>pay u </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" >
+    <script id="bolt" src="https://checkout-static.citruspay.com/bolt/run/bolt.min.js" bolt-
+    color="red" bolt-logo="<image path>"></script>
+  </head>
+  <body>
+   <form>
+
+     <label for="name">key</label>
+     <span>{{data.accesskey}}</span>
+
+     <label for="name">tnx id</label>
+     <span>{{data.sample_data.mtx}}</span>
+
+     <label for="name">amount</label>
+     <span>{{data.sample_data.amount}}</span>
+
+     <label for="name">name</label>
+     <span>{{data.sample_data.name}}</span>
+
+     <label for="email">email</label>
+     <span>{{data.sample_data.email_id}}</span>
+
+     <label for="name">number</label>
+     <span>{{data.sample_data.contact_number}}</span>
+
+     <label for="name">productinfo</label>
+     <span>{{data.sample_data.productinfo}}</span>
+
+   </form>
+  </body>
+
+  <script type="text/javascript">
+
+async function test(){
+  let data_from_dom = document.querySelectorAll('span');
+  // console.log(data_from_dom);
+  let pd = {
+    key:  data_from_dom[0].innerText,
+    txnid: data_from_dom[1].innerText ,
+    amount: parseFloat( data_from_dom[2].innerText ),
+    firstname: data_from_dom[3].innerText,
+    email: data_from_dom[4].innerText,
+    phone: parseInt(data_from_dom[5].innerText),
+    productinfo: data_from_dom[6].innerText,
+    surl: window.location.origin + '/success',
+    furl: window.location.origin + '/failure',
+    hash: ''
+  }
+
+  let data = {
+    'txnid' : pd.txnid,
+    'amount' : pd.amount,
+    'productinfo' : pd.productinfo,
+    'firstname' : pd.firstname,
+    'email'   : pd.email,
+  };
+
+  let self = this;
+
+  const config = {
+    headers : {
+      'content-type' : 'application/json'
+    },
+    method : 'POST',
+    body : await JSON.stringify(data)
+  }
+
+ let response =  await fetch('/payment/payumoney' , config);
+ response = await response.json();
+ // console.log(response);
+
+ if(response){
+   pd.hash = response.hash;
+   self.redirectToPayU(pd);
+ }else{
+   console.log('something went wrong in fed' , response , pd);
+ }
+
+}
+  test();
+
+function redirectToPayU(pd) {
+
+    //use window.bolt.launch if you face an error in bolt.launch
+  bolt.launch(pd, {
+    // console.log(window.location.origin + '/payment/payumoney/response');
+      responseHandler: async function (response) {
+      // your payment response Code goes here
+       console.log(response);
+
+      let res = await fetch(window.location.origin + '/payment/payumoney/response', {
+        method: 'POST',
+        headers: {
+         'Accept': 'application/json',
+         'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(response.response)
+      })
+       res = await res.json();
+       console.log(res);
+    },
+    catchException: function (response) {
+      // the code you use to handle the integration errors goes here
+      // Make any UI changes to convey the error to the user
+      console.log('err' , response);
+    }
+
+  });
+  }
+
+  </script>
+
+</html>

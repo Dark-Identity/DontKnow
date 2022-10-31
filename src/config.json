@@ -1,0 +1,15 @@
+{
+  "accesskey" 	: "6BFPjU",
+	"secretkey" 	: "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCqDOHBSuY8S7acugxhz7F4SK64B9ZXwn1DiaiLghLmZHPeDczrYC02v21fyUZApbMHr+fupoC1T3k9qVPYNBml6levain0qoE1Qywl5/s2y5HRoxEKuM4+AswjkOfqdC7sjrvUvMNK7KGTo1hhj978+kwOmpnVYZWiPuEWg9hMNiDBF0slS12f0HvOK/1xv5j1GeEuwEQeKeNXfF9ivNu9ehZDJPJ9Pp4XS3bBpge9EeBAgAX9VVH2V9tQRgFExGrgdXbwZ3GWK/hpIzN+l4cJc5CD8QkBVZiHyixmnr9M1Mddbqwt1M4HBbnVzdUSlI1u5sjv6V/BvU7KdXzrP1LpAgMBAAECggEAQJZ7+Kq2IBix131izpPQWFti4Us4wkSAx3I1ridNfmyRBbpAJvZ0teKnbEZKhKtrAHRzp1VedX8mEaGK0weW5knH3Dx6iw9n3A8TaaJe7EUNsY46HtRqoWr2lluneol+eSMNfJPlqUOPa0AThZrbm0KGONXHsCBMcT9oxuB0+xzFFR4BqcWp0enKI0EvBI15wtiGQuvuJANWRG80WBXT3qil0Qduv6u4fTqaea5g5FSZpzyvMSh56dH+1VNbC6zWx+0VQnbxsuwWm60H546zk8tE2MHlu/VnIEf4Nc/c921CW/2lAxg+Hh5CfhUK+AabmcP86vEW2sY46sBS0ObiAQKBgQDgH+0LOM5zmiNNt5MYj24nUyrbmEwe7gMuUA3VvnVyu4ZZM4L1YM4MYcPR94DJBcwZqT1O/jHxI7ovs7XR/io9JvNBKk5bFGuduop3W37MXP5EvMuz48RoFRnoLVQnkyKDp3zmRm9NBrFnwyjhTIeLbc0qs8+AlM/KPkyLmLWOGQKBgQDCPC5qyqN24c70HU9GfGo54zyjJp5shX8rwTxXdgSP1i0e6RLp/cRIZFVV1+r3rzG4pZf35JuXmDOHQLipDas5up7pd8+SuTpP0vdQmNjZ6aRPUMOv4ykUQFhkK2LV2cLIkptqKMBdWgv+hMPggpwhOVbtRXW2vRAzNU4yg1nlUQKBgQCF/RAtwUxLeD7a24CpEjZ8dBAPMEFxzEFCksFyo2Z7rPhoo48LO1Bzvo7fG+R2SWz3emIYs4cP7pgEpJ9yZ0zBOmP69Vvav56GsVrOeHiZnI62cVgmt2hYASV31IGXFzNvGdZlpH4twm6U5euupZ3zETWy7cSDznNbKVuBqU4BIQKBgF2s1poMZq+0EbJr3ErbQAPxEtKAkpE2BPIePLLVqTeRjKtGryeIirx7HyjKfHi91pX9zv/wEhYXgmptjWGCxRyPY4qnjMVvba8HyNznClZ2NxdFlUrjnHE24ypUPlNytV00T53wT232OqiicTF67D+dvs2p3S6nmgOIZtE3xggxAoGBANMVO979KMtBPo6n89ghtG1Ag9tUV/aP2rzOSGbLDcou8XQLOa2x7Lpl+GG0uc7yekmYms9Ms79DVg0XRaM+qsh8JaPMuEMqW/TuiDJPw+GtMJFbwnU+/zb0CHak5sHC0jLUDezXaC99oLQt+S319aph4LVn9c+Ya8hWveU2As4+",
+	"environment"   : "live",
+	"remote_script" : "https://payments.open.money/layer",
+	"sample_data" 	: {
+						"amount" : "100",
+						"currency": "INR",
+						"name"	  : "vishal",
+						"email_id" : "vkvk@gmail.com",
+						"contact_number" : "9162871357",
+						"mtx" : "",
+            "productinfo" : "iphone"
+					   }
+}
